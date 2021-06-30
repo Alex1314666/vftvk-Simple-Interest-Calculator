@@ -5,8 +5,8 @@ function compute()
     // get principal value
     var principal = document.getElementById("principal").value;
     // validation
-    // if negative, waiting new input
-    if(parseInt(principal) <= 0){
+    // if negative or no input, waiting new input
+    if(parseInt(principal) <= 0 || principal==''){
         document.getElementById("validation").innerHTML="<mark>Enter a positive number</mark><br/><button onclick=\"focusPrincipal()\"> Ok</button>";
 
     }
