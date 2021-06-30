@@ -1,16 +1,60 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <!--   insert javaScript     -->
+        <script src="script.js"></script>
+        <!--   insert style.css     -->
+        <link rel="stylesheet" href="style.css">
+        <!--   title     -->
+        <title>Any relevant title you want to give</title>
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <!--   Wrap everything     -->
+        <div class="maindiv">
+            <!--   title         -->
+            <h1>Simple Interest Calculator</h1>
+            <!--    get principal        -->
+            <div class="input-principal">
+                Amount <input type="number" id="principal">
+                <br/>
+                <!--        validate output        -->
+                <span id="validation" >
+                </span>
+            </div>
+            <!--    get interest rate        -->
+            <div class="input-interet">
+                Interest Rate <input type="range" onchange="updateRate()"   id="rate" min="minval" max="maxval" value="default_val" step="10.25%">
+                <span id="rate_val">10.25%</span>
+            </div>
+            <!--    get years        -->
+            <div class="input-year">
+                No. of Years <select id="years">
+                    <!--     Select from 1 to 10       -->
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <!--    Compute and get result        -->
+            <div class="input-result">
+                <!--        compute button       -->
+                <button onclick="compute()">Compute Interest</button>
+                <br/>
+                <!-- result output -->
+                <span id="result">
+                </span>
+            </div>
+            <!--    footer        -->
+            <footer>
+                &#169; This Calculator belongs to Yi Z
+            </footer>
+        </div>
     </body>
 </html>

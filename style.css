@@ -1,4 +1,31 @@
-body {background-color:tan;}
-h1{color:green;}
+/* @Author: Yi Z */
+/*body {*/
+/*    background-color:tan;*/
+/*}*/
+/*h1{color:green;}*/
+/* body */
+body {
+    /* set background color */
+    background-color:black;
+    /* set font family */
+    font-family:arial;
+    /* set font color */
+    color:white
+}
+/* h1 */
+h1{
+    /* set font color */
+    color:grey;
+    /* set font family */
+    font-family:verdana
+}
+/* maindiv */
+.maindiv {
+    background-color:white;
+    color:black;
+    width:300px;
+    padding:20px;
+    border-radius:25px;
+    margin:auto;
 
-
+}
